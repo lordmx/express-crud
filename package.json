@@ -1,0 +1,48 @@
+{
+  "name": "app-gateway",
+  "version": "1.0.0",
+  "description": "Gateway for Smart home",
+  "scripts": {
+    "build": "npm run clean && tsc && npm run apidoc",
+    "dev": "tsc --watch & nodemon dist",
+    "test": "tsc && mocha dist/**/*.spec.js",
+    "lint": "eslint src --ext ts",
+    "tsc": "tsc",
+    "apidoc": "apidoc -i ./src -o ./apidoc",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@0001git10.msk.mts.ru:cedar/app-auth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-bearer-token": "^2.1.1",
+    "inversify": "^4.11.1",
+    "mongoose": "^5.2.12",
+    "mongoose-transactions": "^1.1.1",
+    "nsqjs": "^0.10.1",
+    "reflect-metadata": "^0.1.12",
+    "socket.io": "^2.0.4",
+    "source-map-support": "^0.5.4",
+    "uniqid": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.3",
+    "@types/express": "^4.16.0",
+    "@types/mocha": "2.2.41",
+    "@types/node": "7.0.22",
+    "@types/nsqjs": "^0.9.0",
+    "@types/socket.io": "^1.4.32",
+    "eslint-config-airbnb-base": "11.2.0",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-promise": "3.5.0",
+    "typescript-eslint-parser": "3.0.0"
+  }
+}
